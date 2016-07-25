@@ -65,13 +65,12 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/slave.jar http://repo.jenkins-ci
   && chmod 644 /usr/share/jenkins/slave.jar
   
 RUN chmod 777 -R /tmp && chmod o+t -R /tmp
+RUN npm install -g npm
 
 COPY jenkins-slave /usr/local/bin/jenkins-slave
 
 VOLUME /home/jenkins
 WORKDIR /home/jenkins
 USER jenkins
-
-RUN npm install -g npm
 
 ENTRYPOINT ["jenkins-slave"]
