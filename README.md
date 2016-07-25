@@ -1,6 +1,6 @@
 # Jenkins JNLP slave Docker image
 
-[`jenkinsci/jnlp-slave`](https://hub.docker.com/r/jenkinsci/jnlp-slave/)
+[`hbkengineering/jnlp-slave`](https://hub.docker.com/r/hbkengineering/jnlp-slave/)
 
 A [Jenkins](https://jenkins-ci.org) slave using JNLP to establish connection.
 
@@ -12,7 +12,7 @@ Make sure your ECS container agent is [updated](http://docs.aws.amazon.com/Amazo
 
 To run a Docker container
 
-    docker run jenkinsci/jnlp-slave -url http://jenkins-server:port <secret> <slave name>
+    docker run hbkengineering/jnlp-slave -url http://jenkins-server:port <secret> <slave name>
 
 optional environment variables:
 
